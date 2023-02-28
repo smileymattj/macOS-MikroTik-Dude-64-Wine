@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/local/wine/local/wine/bin/wine32on64 ~/.wine/drive_c/Program\ Files/Dude/dude.exe
+/usr/local/wine/bin/wine32on64 ~/.wine/drive_c/Program\ Files/Dude/dude.exe
