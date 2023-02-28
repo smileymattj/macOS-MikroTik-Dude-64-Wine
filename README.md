@@ -12,6 +12,7 @@ https://www.nirsoft.net/utils/resources_extract.html<br>
 
 ## Create Temp Working Directory ##
 mkdir WineBuilds<br>
+cd WineBuilds<br>
 
 
 ## Download Assets ##
