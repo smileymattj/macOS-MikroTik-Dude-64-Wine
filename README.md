@@ -11,7 +11,7 @@ https://www.nirsoft.net/utils/resources_extract.html<br>
 
 
 ## Create Temp Working Directory ##
-mkdir WineBuilds
+mkdir WineBuilds<br>
 
 
 ## Download Assets ##
@@ -25,53 +25,53 @@ curl -O -L https://raw.githubusercontent.com/smileymattj/macOS-MikroTik-Dude-64-
 
 
 ## Install XQuartz
-open XQuartz-2.8.5.pkg
+open XQuartz-2.8.5.pkg<br>
 
 
 ## Install Wine ##
-open WS11WineCX21.2.0.tar.7z
+open WS11WineCX21.2.0.tar.7z<br>
 
-cd wswine.bundle
-sudo rm -r share/wine/gecko
-sudo mkdir /usr/local/wine
-sudo mv * /usr/local/wine/
+cd wswine.bundle<br>
+sudo rm -r share/wine/gecko<br>
+sudo mkdir /usr/local/wine<br>
+sudo mv * /usr/local/wine/<br>
 
 
 ## Install Dude ##
-/usr/local/wine/bin/wine32on64 dude-install-7.8.exe
+/usr/local/wine/bin/wine32on64 dude-install-7.8.exe<br>
 
-/usr/local/wine/bin/wine32on64 ~/.wine/drive_c/Program\ Files/Dude/dude.exe
+/usr/local/wine/bin/wine32on64 ~/.wine/drive_c/Program\ Files/Dude/dude.exe<br>
 
 
 ## Create Application Shortcut ##
-mkdir -p Dude.app/Contents/MacOS
-mkdir -p Dude.app/Contents/Resources
+mkdir -p Dude.app/Contents/MacOS<br>
+mkdir -p Dude.app/Contents/Resources<br>
 
-mv Info.plist Dude.app/Contents/
-mv Dude Dude.app/Contents/MacOS/
-chmod +x Dude.app/Contents/MacOS/Dude
+mv Info.plist Dude.app/Contents/<br>
+mv Dude Dude.app/Contents/MacOS/<br>
+chmod +x Dude.app/Contents/MacOS/Dude<br>
 
 
 ## Extract & Set Icon ##
-cp ~/.wine/drive_c/Program\ Files/Dude/dude.exe dude.exe
+cp ~/.wine/drive_c/Program\ Files/Dude/dude.exe dude.exe<br>
 
-open resourcesextract.zip
+open resourcesextract.zip<br>
 
-/usr/local/wine/bin/wine32on64 resourcesextract/ResourcesExtract.exe
+/usr/local/wine/bin/wine32on64 resourcesextract/ResourcesExtract.exe<br>
 
-open Dude_200.ico 
+open Dude_200.ico<br>
 
-mkdir Icon.iconset
-mv icon_128x128.png Icon.iconset/icon_128x128.png
+mkdir Icon.iconset<br>
+mv icon_128x128.png Icon.iconset/icon_128x128.png<br>
 
-iconutil -c icns Icon.iconset
+iconutil -c icns Icon.iconset<br>
 
-mv Icon.icns Dude.app/Contents/Resources/
+mv Icon.icns Dude.app/Contents/Resources/<br>
 
 
 ## Install Dude Application ## 
-mv Dude.app /Applications/
+mv Dude.app /Applications/<br>
 
 ## Cleanup ##
-cd ..
-rm -r WineBuilds
+cd ..<br>
+rm -r WineBuilds<br>
