@@ -3,6 +3,7 @@ Run 32-bit MikroTik Dude Client on macOS Catalina (64-bit only) or later
 
 
 ## Resource Links ##
+https://youtu.be/mS_xlhlDsSs
 
 https://www.xquartz.org<br>
 https://github.com/Gcenx/WineskinServer/releases<br>
@@ -33,9 +34,10 @@ open XQuartz-2.8.5.pkg<br>
 open WS11WineCX21.2.0.tar.7z<br>
 
 cd wswine.bundle<br>
-sudo rm -r share/wine/gecko<br>
+rm -r share/wine/gecko<br>
 sudo mkdir /usr/local/wine<br>
 sudo mv * /usr/local/wine/<br>
+cd ..<br>
 
 
 ## Install Dude ##
@@ -54,16 +56,16 @@ chmod +x Dude.app/Contents/MacOS/Dude<br>
 
 
 ## Extract & Set Icon ##
-cp ~/.wine/drive_c/Program\ Files/Dude/dude.exe dude.exe<br>
+cp ~/.wine/drive_c/Program\ Files/Dude/dude.exe ./<br>
 
-open resourcesextract.zip<br>
+unzip resourcesextract.zip<br>
 
-/usr/local/wine/bin/wine32on64 resourcesextract/ResourcesExtract.exe<br>
+/usr/local/wine/bin/wine32on64 ResourcesExtract.exe<br>
 
 open Dude_200.ico<br>
 
 mkdir Icon.iconset<br>
-mv icon_128x128.png Icon.iconset/icon_128x128.png<br>
+mv icon_128x128.png Icon.iconset/<br>
 
 iconutil -c icns Icon.iconset<br>
 
